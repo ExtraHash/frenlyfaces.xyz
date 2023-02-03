@@ -32,7 +32,7 @@ export function Home() {
             </div>
             <div className="">
                 <div className="mt-20 mx-auto" style={{ zIndex: 1000 }}>
-                    <a href="https://twitter.com/frenlyfaces" target="__blank">
+                    <a href="https://alto.build/collections/frenly-faces" target="__blank">
                         <img
                             src={altoButton}
                             style={{
