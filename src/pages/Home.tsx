@@ -31,15 +31,13 @@ export function Home() {
                 ></img>
             </div>
             <div className="">
-                <div
-                    style={{ zIndex: 1000, margin: "auto", marginTop: "4rem" }}
-                >
+                <div className="mt-20 mx-auto" style={{ zIndex: 1000 }}>
                     <a href="https://twitter.com/frenlyfaces" target="__blank">
                         <img
                             src={altoButton}
                             style={{
                                 height: "auto",
-                                maxHeight: "88px",
+                                maxHeight: "78px",
                                 margin: "auto",
                             }}
                         />
@@ -49,7 +47,7 @@ export function Home() {
                             src={twitterButton}
                             style={{
                                 height: "auto",
-                                maxHeight: "88px",
+                                maxHeight: "78px",
                                 margin: "auto",
                             }}
                         />
