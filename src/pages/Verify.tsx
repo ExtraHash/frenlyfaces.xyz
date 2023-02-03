@@ -44,18 +44,22 @@ export function Verify() {
                             marginBottom: "2rem",
                         }}
                     >
-                        Please verify your identity to be Seen.
-                    </p>
-                    <a href="https://twitter.com/frenlyfaces" target="__blank">
-                        <img
-                            src={twitterButton}
-                            style={{
-                                height: "auto",
-                                maxHeight: "78px",
-                                margin: "auto",
+                        Please{" "}
+                        <button
+                            onClick={() => {
+                                window.location.href = `https://discord.com/api/oauth2/authorize?client_id=1071113835659923466&redirect_uri=${encodeURIComponent(
+                                    process.env.REACT_APP_DISCORD_REDIRECT_URI!
+                                )}&response_type=token&scope=identify`;
                             }}
-                        />
-                    </a>
+                            style={{
+                                textDecoration: "underline",
+                                color: "#3e35f9",
+                            }}
+                        >
+                            verify your Discord
+                        </button>{" "}
+                        to be Seen.
+                    </p>
                 </div>
             </div>
         </div>
