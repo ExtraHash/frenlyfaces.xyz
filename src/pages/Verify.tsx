@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import bg from "../assets/bg.png";
-import welcome from "../assets/welcome.png";
+import welcome from "../assets/eye.png";
 import altoButton from "../assets/alto.png";
 import twitterButton from "../assets/twitter.png";
 
-export function Home() {
+export function Verify() {
     return (
         <div
             style={{
@@ -20,7 +20,7 @@ export function Home() {
             <div>
                 <img
                     style={{
-                        width: "800px",
+                        width: "400px",
                         maxWidth: "80%",
                         zIndex: 1000,
                         margin: "auto",
@@ -31,20 +31,21 @@ export function Home() {
                 ></img>
             </div>
             <div className="">
-                <div className="mt-20 mx-auto" style={{ zIndex: 1000 }}>
-                    <a
-                        href="https://alto.build/collections/frenly-faces"
-                        target="__blank"
+                <div
+                    className="mt-20 mx-auto text-center"
+                    style={{ zIndex: 1000 }}
+                >
+                    <p
+                        className="text-center mx-auto"
+                        style={{
+                            textAlign: "center",
+                            fontSize: 24,
+                            fontFamily: "monospace",
+                            marginBottom: "2rem",
+                        }}
                     >
-                        <img
-                            src={altoButton}
-                            style={{
-                                height: "auto",
-                                maxHeight: "78px",
-                                margin: "auto",
-                            }}
-                        />
-                    </a>
+                        Please verify your identity to be Seen.
+                    </p>
                     <a href="https://twitter.com/frenlyfaces" target="__blank">
                         <img
                             src={twitterButton}
