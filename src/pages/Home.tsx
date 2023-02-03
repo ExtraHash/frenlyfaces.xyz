@@ -3,6 +3,7 @@ import bg from "../assets/bg.png";
 import welcome from "../assets/welcome.png";
 import altoButton from "../assets/alto.png";
 import twitterButton from "../assets/twitter.png";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export function Home() {
     return (
@@ -17,6 +18,16 @@ export function Home() {
             }}
             className="flex flex-col items-centered"
         >
+            <div
+                style={{
+                    zIndex: 1005,
+                    position: "absolute",
+                    right: "1rem",
+                    top: "1rem",
+                }}
+            >
+                <ConnectButton />
+            </div>
             <div>
                 <img
                     style={{
