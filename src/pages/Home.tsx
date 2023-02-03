@@ -24,7 +24,7 @@ export function Home() {
                         maxWidth: "80%",
                         zIndex: 1000,
                         margin: "auto",
-                        marginTop: "20%",
+                        marginTop: "12%",
                     }}
                     src={welcome}
                     alt="welcome to frenly faces"
