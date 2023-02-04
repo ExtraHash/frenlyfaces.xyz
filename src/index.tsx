@@ -28,7 +28,10 @@ const cantoChain: Chain = {
     },
     rpcUrls: {
         default: {
-            http: ["https://canto.slingshot.finance"],
+            http: [
+                "https://canto.gravitychain.io",
+                "https://canto.slingshot.finance",
+            ],
         },
     },
     blockExplorers: {
