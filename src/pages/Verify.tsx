@@ -56,17 +56,7 @@ export function Verify() {
     }, [accessToken]);
 
     return (
-        <div
-            style={{
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                backgroundImage: `url(${bg})`,
-                backgroundSize: "cover",
-                zIndex: 999,
-            }}
-            className="flex flex-col items-centered"
-        >
+        <div className="flex flex-col items-centered">
             <div
                 style={{
                     zIndex: 1005,
@@ -84,7 +74,7 @@ export function Verify() {
                         maxWidth: "80%",
                         zIndex: 1000,
                         margin: "auto",
-                        marginTop: "12%",
+                        marginTop: "2rem",
                     }}
                     src={eye}
                     alt="welcome to frenly faces"
@@ -93,7 +83,7 @@ export function Verify() {
             {!success && !accessToken && (
                 <div className="">
                     <div
-                        className="mt-20 mx-auto text-center"
+                        className="mt-10 mx-auto text-center"
                         style={{ zIndex: 1000 }}
                     >
                         <p
@@ -128,7 +118,7 @@ export function Verify() {
             {!success && accessToken && user && (
                 <div className="">
                     <div
-                        className="mt-20 mx-auto text-center"
+                        className="mt-10 mx-auto text-center"
                         style={{ zIndex: 1000 }}
                     >
                         <p
@@ -242,7 +232,7 @@ export function Verify() {
             )}
             {success && (
                 <div
-                    className="mt-20 mx-auto text-center"
+                    className="mt-10 mx-auto text-center"
                     style={{ zIndex: 1000 }}
                 >
                     <p
