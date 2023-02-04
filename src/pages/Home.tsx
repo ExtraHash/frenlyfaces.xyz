@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import bg from "../assets/bg.png";
 import welcome from "../assets/welcome.png";
 import altoButton from "../assets/alto.png";
 import twitterButton from "../assets/twitter.png";

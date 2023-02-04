@@ -1,8 +1,4 @@
-import { Link, useSearchParams } from "react-router-dom";
-import bg from "../assets/bg.png";
 import eye from "../assets/eye.png";
-import eye2 from "../assets/eye2.png";
-import eye3 from "../assets/eye3.png";
 
 import { useEffect, useState } from "react";
 import { ConnectButton, useConnectModal } from "@rainbow-me/rainbowkit";
@@ -30,7 +26,7 @@ export function Verify() {
     ];
     const [user, setUser] = useState<DiscordUser | null>(null);
 
-    const { address, isConnecting, isDisconnected } = useAccount();
+    const { address, isDisconnected } = useAccount();
     const { openConnectModal } = useConnectModal();
     const { signMessageAsync } = useSignMessage();
 
