@@ -193,7 +193,7 @@ export function Verify() {
                                                     }
                                                 );
 
-                                                if (verifyRes.status !== 200) {
+                                                if (verifyRes.status === 200) {
                                                     setSuccess(true);
                                                 } else {
                                                     alert(
