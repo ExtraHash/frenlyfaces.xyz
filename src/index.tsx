@@ -43,7 +43,7 @@ const cantoChain: Chain = {
 const { chains, provider } = configureChains([cantoChain], [publicProvider()]);
 
 const { connectors } = getDefaultWallets({
-    appName: "My RainbowKit App",
+    appName: "FrenlyFaces",
     chains,
 });
 
