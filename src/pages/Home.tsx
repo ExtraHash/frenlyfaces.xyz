@@ -15,8 +15,8 @@ export function Home() {
                 style={{
                     zIndex: 1005,
                     position: "absolute",
-                    right: "1rem",
-                    top: "1rem",
+                    right: "20px",
+                    top: "20px",
                 }}
             >
                 <ConnectButton />
@@ -28,13 +28,13 @@ export function Home() {
                         maxWidth: "80%",
                         zIndex: 1000,
                         margin: "auto",
-                        marginTop: "2rem",
+                        marginTop: "100px",
                     }}
                     src={welcome}
                     alt="welcome to frenly faces"
                 ></img>
             </div>
-            <div className="m-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-10">
+            <div>
                 <a
                     href="https://alto.build/collections/frenly-faces"
                     target="__blank"

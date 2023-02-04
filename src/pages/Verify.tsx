@@ -56,7 +56,7 @@ export function Verify() {
     }, [accessToken]);
 
     return (
-        <div className="flex flex-col items-centered">
+        <div>
             <div
                 style={{
                     zIndex: 1005,
@@ -74,20 +74,16 @@ export function Verify() {
                         maxWidth: "80%",
                         zIndex: 1000,
                         margin: "auto",
-                        marginTop: "2rem",
+                        marginTop: "100px",
                     }}
                     src={eye}
                     alt="welcome to frenly faces"
                 ></img>
             </div>
             {!success && !accessToken && (
-                <div className="">
-                    <div
-                        className="mt-10 mx-auto text-center"
-                        style={{ zIndex: 1000 }}
-                    >
+                <div>
+                    <div style={{ zIndex: 1000 }}>
                         <p
-                            className="text-center mx-auto"
                             style={{
                                 textAlign: "center",
                                 fontSize: 24,
@@ -116,13 +112,9 @@ export function Verify() {
                 </div>
             )}
             {!success && accessToken && user && (
-                <div className="">
-                    <div
-                        className="mt-10 mx-auto text-center"
-                        style={{ zIndex: 1000 }}
-                    >
+                <div>
+                    <div style={{ zIndex: 1000 }}>
                         <p
-                            className="text-center mx-auto"
                             style={{
                                 textAlign: "center",
                                 fontSize: 24,
@@ -231,12 +223,8 @@ export function Verify() {
                 </div>
             )}
             {success && (
-                <div
-                    className="mt-10 mx-auto text-center"
-                    style={{ zIndex: 1000 }}
-                >
+                <div style={{ zIndex: 1000 }}>
                     <p
-                        className="text-center mx-auto"
                         style={{
                             textAlign: "center",
                             fontSize: 24,
@@ -247,7 +235,6 @@ export function Verify() {
                         you have been Seen
                     </p>
                     <p
-                        className="text-center mx-auto"
                         style={{
                             textAlign: "center",
                             fontSize: 24,
