@@ -193,11 +193,11 @@ export function Verify() {
                                                     }
                                                 );
 
-                                                if (verifyRes.status === 200) {
+                                                if (verifyRes.status !== 200) {
                                                     setSuccess(true);
                                                 } else {
                                                     alert(
-                                                        "We couldn't verify you as a frenly face. Please make sure you have the correct wallet connected. If you continue to experience problems, DM us on Twitter @FrenlyFaces"
+                                                        "We couldn't verify you as a frenly face. RPCs for Canto are known to be a bit behind so you may have to wait some time if you recently purchased your Frenly, or verify you are connected with the right wallet. If you continue to experience problems, DM us on Twitter @FrenlyFaces"
                                                     );
                                                 }
                                             } else {
