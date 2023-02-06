@@ -85,15 +85,12 @@ export function Verify() {
                         >
                             please{" "}
                             <button
+                                className="underline text-pink-600 font-bold"
                                 onClick={() => {
                                     window.location.href = `https://discord.com/api/oauth2/authorize?client_id=1071113835659923466&redirect_uri=${encodeURIComponent(
                                         process.env
                                             .REACT_APP_DISCORD_REDIRECT_URI!
                                     )}&response_type=token&scope=identify`;
-                                }}
-                                style={{
-                                    textDecoration: "underline",
-                                    color: "#3e35f9",
                                 }}
                             >
                                 verify your Discord
@@ -126,10 +123,7 @@ export function Verify() {
                                     please{" "}
                                     <button
                                         onClick={openConnectModal}
-                                        style={{
-                                            textDecoration: "underline",
-                                            color: "#3e35f9",
-                                        }}
+                                        className="underline text-pink-600 font-bold"
                                     >
                                         connect your wallet
                                     </button>{" "}
@@ -200,10 +194,7 @@ export function Verify() {
                                                 alert(res.statusText);
                                             }
                                         }}
-                                        style={{
-                                            textDecoration: "underline",
-                                            color: "#3e35f9",
-                                        }}
+                                        className="underline text-pink-600 font-bold"
                                     >
                                         sign a message
                                     </button>{" "}

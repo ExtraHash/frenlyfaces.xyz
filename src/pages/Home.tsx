@@ -18,7 +18,7 @@ function randomIntFromInterval(min: number, max: number): number {
 
 export function NFTFrame(props: { nft: FrenlyNFT }) {
     return (
-        <div className="bg-slate-100 dark:bg-gray-900 rounded p-4">
+        <div className="bg-slate-100 dark:bg-neutral-900 rounded p-4">
             <p className="text-md mb-1 -mt-2">
                 <strong>#{props.nft.edition}</strong>
             </p>
@@ -133,17 +133,18 @@ export function Home() {
                         <li>
                             <a
                                 className="underline text-pink-600 font-bold"
-                                href="https://evm.explorer.canto.io/address/0x020bbfC79C96c22A8677df740379ecCc0297E52C"
+                                href={`${process.env.REACT_APP_BLOCK_EXPLORER_URI}/address/0x020bbfC79C96c22A8677df740379ecCc0297E52C`}
                                 target="_blank"
                                 rel="noreferrer"
                             >
                                 Contract
                             </a>
                         </li>
+
                         <li>
                             <a
                                 className="underline text-pink-600 font-bold"
-                                href="https://evm.explorer.canto.io/address/0x431C7354Fd912763c0a9E9dCa86d2d6EB0BA718c"
+                                href={`${process.env.REACT_APP_BLOCK_EXPLORER_URI}/address/0x431C7354Fd912763c0a9E9dCa86d2d6EB0BA718c`}
                                 target="_blank"
                                 rel="noreferrer"
                             >

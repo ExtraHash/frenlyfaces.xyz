@@ -40,7 +40,7 @@ const cantoChain: Chain = {
     blockExplorers: {
         default: {
             name: "Canto Explorer",
-            url: "https://evm.explorer.canto.io",
+            url: "https://tuber.build",
         },
     },
     testnet: false,
