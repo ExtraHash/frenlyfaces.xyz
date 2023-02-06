@@ -60,10 +60,10 @@ root.render(
     <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider
             chains={chains}
-            // theme={midnightTheme({
-            //     accentColor: "#000",
-            //     fontStack: "system",
-            // })}
+            theme={midnightTheme({
+                accentColor: "#000",
+                fontStack: "system",
+            })}
         >
             <BrowserRouter>
                 <App />
