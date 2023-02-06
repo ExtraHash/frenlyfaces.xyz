@@ -13,6 +13,8 @@ import {
 import { Chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 
+window.Buffer = window.Buffer || require("buffer").Buffer;
+
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
 );
