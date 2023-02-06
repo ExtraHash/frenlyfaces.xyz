@@ -12,6 +12,7 @@ import {
 } from "@rainbow-me/rainbowkit";
 import { Chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
+import { RecoilRoot } from "recoil";
 
 window.Buffer = window.Buffer || require("buffer").Buffer;
 
@@ -59,19 +60,21 @@ const wagmiClient = createClient({
 });
 
 root.render(
-    <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider
-            chains={chains}
-            theme={midnightTheme({
-                accentColor: "#000",
-                fontStack: "system",
-            })}
-        >
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </RainbowKitProvider>
-    </WagmiConfig>
+    <RecoilRoot>
+        <WagmiConfig client={wagmiClient}>
+            <RainbowKitProvider
+                chains={chains}
+                theme={midnightTheme({
+                    accentColor: "#000",
+                    fontStack: "system",
+                })}
+            >
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </RainbowKitProvider>
+        </WagmiConfig>
+    </RecoilRoot>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,9 +1,15 @@
 import welcome from "../assets/welcome.png";
+import welcomeWhite from "../assets/welcome-white.png";
+
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { Navbar } from "../components/Navbar";
 import { useEffect, useState } from "react";
 import { FrenlyNFT } from "../types/FrenlyNFT";
 import publicGood from "../assets/publicgood.mp3";
+import { useLocalStorage } from "../hooks/useLocalStorage";
+import { darkThemePreferred } from "../constants/styling";
+import { themeState } from "../state/theme";
+import { useRecoilValue } from "recoil";
 
 function randomIntFromInterval(min: number, max: number): number {
     // min and max included
@@ -12,7 +18,7 @@ function randomIntFromInterval(min: number, max: number): number {
 
 export function NFTFrame(props: { nft: FrenlyNFT }) {
     return (
-        <div className="bg-white rounded p-4">
+        <div className="bg-slate-100 dark:bg-gray-900 rounded p-4">
             <p className="text-md mb-1 -mt-2">
                 <strong>#{props.nft.edition}</strong>
             </p>
@@ -32,6 +38,7 @@ export function NFTFrame(props: { nft: FrenlyNFT }) {
 
 export function Home() {
     const [displayedFrenlys, setDisplayedFrenlys] = useState<FrenlyNFT[]>([]);
+    const recoilTheme = useRecoilValue(themeState);
 
     useEffect(() => {
         const getFrenlys = async () => {
@@ -54,9 +61,7 @@ export function Home() {
             for (const id of ids) {
                 promises.push(getFrenly(id));
             }
-
             await Promise.all(promises);
-
             setDisplayedFrenlys(frenlys);
         };
         getFrenlys();
@@ -64,17 +69,19 @@ export function Home() {
 
     return (
         <>
-            <div className="font-mono bg-slate-100">
+            <div className="font-mono bg-white dark:bg-black dark:text-white">
                 <Navbar RightElement={<ConnectButton showBalance={false} />} />
                 <div className="mx-4">
                     <div className="mt-5 -ml-2 md:-mt-14">
                         <img
-                            src={welcome}
+                            src={
+                                recoilTheme === "light" ? welcome : welcomeWhite
+                            }
                             width={400}
                             alt="welcome to frenly faces"
                         ></img>
                     </div>
-                    <p className="mt-2">
+                    <p className="mt-2 ">
                         Frenly Faces is a <strong>social experiment</strong> and
                         1000 piece <strong>hand drawn NFT collection</strong> on
                         Canto blockchain that Free minted on 02/01/2023. Frenly
@@ -175,7 +182,7 @@ export function Home() {
                     </p>
 
                     <p className="mt-5 text-xs">with ❤️ from FF</p>
-                    <p className="text-slate-100">255</p>
+                    <p className="text-white dark:text-black">255</p>
                 </div>
             </div>
         </>

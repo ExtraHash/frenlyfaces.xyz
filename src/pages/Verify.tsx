@@ -3,6 +3,7 @@ import eye from "../assets/eye.png";
 import { useEffect, useState } from "react";
 import { ConnectButton, useConnectModal } from "@rainbow-me/rainbowkit";
 import { useAccount, useSignMessage } from "wagmi";
+import { Navbar } from "../components/Navbar";
 
 interface DiscordUser {
     id: string;
@@ -52,17 +53,13 @@ export function Verify() {
     }, [accessToken]);
 
     return (
-        <div>
-            <div
-                style={{
-                    zIndex: 1005,
-                    position: "absolute",
-                    right: "1rem",
-                    top: "1rem",
-                }}
-            >
-                <ConnectButton showBalance={false} />
-            </div>
+        <div
+            className="dark:text-white"
+            style={{
+                height: "100%",
+            }}
+        >
+            <Navbar RightElement={<ConnectButton showBalance={false} />} />
             <div>
                 <img
                     style={{
@@ -70,7 +67,6 @@ export function Verify() {
                         maxWidth: "80%",
                         zIndex: 1000,
                         margin: "auto",
-                        marginTop: "100px",
                     }}
                     src={eye}
                     alt="welcome to frenly faces"
