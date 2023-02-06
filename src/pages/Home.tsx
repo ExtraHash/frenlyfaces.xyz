@@ -136,7 +136,7 @@ export function Home() {
                         <li>
                             <a
                                 className="underline text-pink-600 font-bold"
-                                href="https://evm.explorer.canto.io/address/0x431C7354Fd912763c0a9E9dCa86d2d6EB0BA7"
+                                href="https://evm.explorer.canto.io/address/0x431C7354Fd912763c0a9E9dCa86d2d6EB0BA718c"
                                 target="_blank"
                                 rel="noreferrer"
                             >
