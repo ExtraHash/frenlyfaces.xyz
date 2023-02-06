@@ -85,7 +85,7 @@ export function Home() {
                     <ul className="mt-5 ml-1">
                         <li>
                             <a
-                                className="underline text-pink-500 font-bold"
+                                className="underline text-pink-600 font-bold"
                                 href="https://alto.build/collections/frenly-faces"
                                 target="_blank"
                                 rel="noreferrer"
@@ -95,7 +95,7 @@ export function Home() {
                         </li>
                         <li>
                             <a
-                                className="underline text-pink-500 font-bold"
+                                className="underline text-pink-600 font-bold"
                                 href="https://twitter.com/frenlyfaces"
                                 target="_blank"
                                 rel="noreferrer"
@@ -105,7 +105,7 @@ export function Home() {
                         </li>
                         <li>
                             <a
-                                className="underline text-pink-500 font-bold"
+                                className="underline text-pink-600 font-bold"
                                 href="https://discord.gg/eJdnQQjwxF"
                                 target="_blank"
                                 rel="noreferrer"
@@ -115,7 +115,7 @@ export function Home() {
                         </li>
                         <li>
                             <a
-                                className="underline text-pink-500 font-bold"
+                                className="underline text-pink-600 font-bold"
                                 href="https://github.com/frenlyfaces"
                                 target="_blank"
                                 rel="noreferrer"
@@ -125,7 +125,7 @@ export function Home() {
                         </li>
                         <li>
                             <a
-                                className="underline text-pink-500 font-bold"
+                                className="underline text-pink-600 font-bold"
                                 href="https://evm.explorer.canto.io/address/0x020bbfC79C96c22A8677df740379ecCc0297E52C"
                                 target="_blank"
                                 rel="noreferrer"
@@ -135,7 +135,7 @@ export function Home() {
                         </li>
                         <li>
                             <a
-                                className="underline text-pink-500 font-bold"
+                                className="underline text-pink-600 font-bold"
                                 href="https://evm.explorer.canto.io/address/0x431C7354Fd912763c0a9E9dCa86d2d6EB0BA7"
                                 target="_blank"
                                 rel="noreferrer"
