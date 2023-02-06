@@ -64,19 +64,13 @@ export function Home() {
 
     return (
         <>
-            <div
-                className="font-mono bg-slate-100"
-                style={{ overflow: "scroll" }}
-            >
+            <div className="font-mono bg-slate-100">
                 <Navbar RightElement={<ConnectButton showBalance={false} />} />
                 <div className="mx-4">
                     <div className="mt-5 -ml-2 md:-mt-14">
                         <img
                             src={welcome}
                             width={400}
-                            style={{
-                                maxWidth: "80%",
-                            }}
                             alt="welcome to frenly faces"
                         ></img>
                     </div>
@@ -91,7 +85,7 @@ export function Home() {
                     <ul className="mt-5 ml-1">
                         <li>
                             <a
-                                className="underline text-violet-700"
+                                className="underline text-pink-500 font-bold"
                                 href="https://alto.build/collections/frenly-faces"
                                 target="_blank"
                                 rel="noreferrer"
@@ -101,7 +95,7 @@ export function Home() {
                         </li>
                         <li>
                             <a
-                                className="underline text-violet-700"
+                                className="underline text-pink-500 font-bold"
                                 href="https://twitter.com/frenlyfaces"
                                 target="_blank"
                                 rel="noreferrer"
@@ -111,7 +105,7 @@ export function Home() {
                         </li>
                         <li>
                             <a
-                                className="underline text-violet-700"
+                                className="underline text-pink-500 font-bold"
                                 href="https://discord.gg/eJdnQQjwxF"
                                 target="_blank"
                                 rel="noreferrer"
@@ -121,7 +115,7 @@ export function Home() {
                         </li>
                         <li>
                             <a
-                                className="underline text-violet-700"
+                                className="underline text-pink-500 font-bold"
                                 href="https://github.com/frenlyfaces"
                                 target="_blank"
                                 rel="noreferrer"
@@ -131,7 +125,7 @@ export function Home() {
                         </li>
                         <li>
                             <a
-                                className="underline text-violet-700"
+                                className="underline text-pink-500 font-bold"
                                 href="https://evm.explorer.canto.io/address/0x020bbfC79C96c22A8677df740379ecCc0297E52C"
                                 target="_blank"
                                 rel="noreferrer"
@@ -141,7 +135,7 @@ export function Home() {
                         </li>
                         <li>
                             <a
-                                className="underline text-violet-700"
+                                className="underline text-pink-500 font-bold"
                                 href="https://evm.explorer.canto.io/address/0x431C7354Fd912763c0a9E9dCa86d2d6EB0BA7"
                                 target="_blank"
                                 rel="noreferrer"
@@ -160,6 +154,19 @@ export function Home() {
                             return <NFTFrame nft={item} key={item.dna} />;
                         })}
                     </div>
+
+                    <div className="mt-5">
+                        <a
+                            rel="license"
+                            href="http://creativecommons.org/publicdomain/zero/1.0/"
+                        >
+                            <img
+                                src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
+                                alt="CC0"
+                            />
+                        </a>
+                    </div>
+
                     <p className="mt-5">
                         Through art, we are Seen. Through code, we can See.
                         Frenly Faces are <strong>CC0 licensed</strong>. Remix
