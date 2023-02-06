@@ -88,7 +88,7 @@ export function Home() {
                         chain. 👽
                     </p>
 
-                    <ul className="mt-5">
+                    <ul className="mt-5 ml-1">
                         <li>
                             <a
                                 className="underline text-violet-700"
@@ -137,6 +137,16 @@ export function Home() {
                                 rel="noreferrer"
                             >
                                 Contract
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                className="underline text-violet-700"
+                                href="https://evm.explorer.canto.io/address/0x431C7354Fd912763c0a9E9dCa86d2d6EB0BA7"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Treasury
                             </a>
                         </li>
                     </ul>
