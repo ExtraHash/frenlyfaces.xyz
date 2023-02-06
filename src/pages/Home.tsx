@@ -18,7 +18,7 @@ export function NFTFrame(props: { nft: FrenlyNFT }) {
             </p>
             <img
                 className=""
-                src={props.nft.image}
+                src={`https://metadata.frenlyfaces.xyz/images/${props.nft.edition}.png`}
                 alt={"frenly #" + props.nft.edition}
             />
             <div className="mt-4">
@@ -44,7 +44,7 @@ export function Home() {
             const promises = [];
             const getFrenly = async (n: number) => {
                 const res = await fetch(
-                    `https://raw.githubusercontent.com/frenlyfaces/metadata/master/json/${n.toString()}`
+                    `https://metadata.frenlyfaces.xyz/json/${n.toString()}`
                 );
                 if (res.status === 200) {
                     frenlys.push(await res.json());
