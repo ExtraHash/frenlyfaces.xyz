@@ -112,7 +112,7 @@ export function Home() {
                         <li>
                             <a
                                 className="underline text-violet-700"
-                                href="https://alto.build/collections/frenly-faces"
+                                href="https://discord.gg/eJdnQQjwxF"
                                 target="_blank"
                                 rel="noreferrer"
                             >
