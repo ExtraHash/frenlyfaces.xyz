@@ -173,7 +173,8 @@ export function Home() {
                         and reuse as you please.
                     </p>
 
-                    <p className="mt-5 mb-10 text-xs">with ❤️ from FF</p>
+                    <p className="mt-5 text-xs">with ❤️ from FF</p>
+                    <p className="text-white">255</p>
                 </div>
             </div>
         </>
