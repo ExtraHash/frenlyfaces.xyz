@@ -61,7 +61,7 @@ export function Verify() {
                     top: "1rem",
                 }}
             >
-                <ConnectButton />
+                <ConnectButton showBalance={false} />
             </div>
             <div>
                 <img

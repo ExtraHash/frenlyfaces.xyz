@@ -8,7 +8,6 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/verify" element={<Verify />} />
-            <Route element={<div>404</div>} />
         </Routes>
     );
 }

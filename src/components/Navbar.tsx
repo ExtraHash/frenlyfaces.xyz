@@ -1,16 +1,14 @@
 import { useState } from "react";
 
-export function Navbar(props: { LeftElement: JSX.Element }) {
-    const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
+export function Navbar(props: { RightElement: JSX.Element }) {
     return (
         <div>
-            <nav className="bg-gray-100">
+            <nav className="">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="flex justify-between">
                         <div className="flex" />
-                        <div className="flex space-x-4">
-                            <div className="mt-5 mb-5">{props.LeftElement}</div>
+                        <div className="flex space-x-6">
+                            <div className="mt-4">{props.RightElement}</div>
                         </div>
                     </div>
                 </div>
