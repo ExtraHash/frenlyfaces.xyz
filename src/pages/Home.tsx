@@ -148,7 +148,7 @@ export function Home() {
                     <audio className="mt-5" controls src={publicGood}></audio>
 
                     <div
-                        className={`mt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4`}
+                        className={`mt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6`}
                     >
                         {displayedFrenlys.map((item) => {
                             return <NFTFrame nft={item} key={item.dna} />;
@@ -157,8 +157,9 @@ export function Home() {
 
                     <div className="mt-5">
                         <a
-                            rel="license"
+                            rel="license noreferrer"
                             href="http://creativecommons.org/publicdomain/zero/1.0/"
+                            target={"_blank"}
                         >
                             <img
                                 src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
