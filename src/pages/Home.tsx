@@ -174,7 +174,7 @@ export function Home() {
                     </p>
 
                     <p className="mt-5 text-xs">with ❤️ from FF</p>
-                    <p className="text-white">255</p>
+                    <p className="text-slate-100">255</p>
                 </div>
             </div>
         </>
