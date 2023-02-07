@@ -151,6 +151,17 @@ export function Home() {
                                 Treasury
                             </a>
                         </li>
+
+                        <li>
+                            <a
+                                className="underline text-pink-600 font-bold"
+                                href={`https://metadata.frenlyfaces.xyz/`}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Metadata (HTTP Mirror)
+                            </a>
+                        </li>
                     </ul>
 
                     <audio className="mt-5" controls src={publicGood}></audio>
