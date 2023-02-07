@@ -6,8 +6,6 @@ import { Navbar } from "../components/Navbar";
 import { useEffect, useState } from "react";
 import { FrenlyNFT } from "../types/FrenlyNFT";
 import publicGood from "../assets/publicgood.mp3";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-import { darkThemePreferred } from "../constants/styling";
 import { themeState } from "../state/theme";
 import { useRecoilValue } from "recoil";
 
