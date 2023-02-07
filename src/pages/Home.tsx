@@ -232,7 +232,7 @@ export function Home() {
                         })}
                     </div>
 
-                    <div className="mt-5">
+                    <div className="mt-8">
                         <a
                             rel="license noreferrer"
                             href="http://creativecommons.org/publicdomain/zero/1.0/"
