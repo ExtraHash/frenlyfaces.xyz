@@ -34,30 +34,27 @@ export function NFTFrame(props: { nft: FrenlyNFT }) {
                 <table className="table-auto text-xs" style={{ width: "100%" }}>
                     <tbody>
                         <tr>
-                            <td>Face</td>
                             <td>
                                 <strong>{props.nft.face}</strong>
                             </td>
-                            <td className="text-right">
+                            <td className="text-right collapse md:visible">
                                 {getRarityValue("Face", props.nft.face)}%
                             </td>
                         </tr>
                         <tr>
-                            <td>Clothing</td>
                             <td>
                                 <strong>{props.nft.clothing}</strong>
                             </td>
-                            <td className="text-right">
+                            <td className="text-right collapse md:visible">
                                 {getRarityValue("Clothing", props.nft.clothing)}
                                 %
                             </td>
                         </tr>
                         <tr>
-                            <td>Background</td>
                             <td>
                                 <strong>{props.nft.background}</strong>
                             </td>
-                            <td className="text-right">
+                            <td className="text-right collapse md:visible">
                                 {getRarityValue(
                                     "Background",
                                     props.nft.background
