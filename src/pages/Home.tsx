@@ -8,6 +8,7 @@ import { FrenlyNFT } from "../types/FrenlyNFT";
 import publicGood from "../assets/publicgood.mp3";
 import { themeState } from "../state/theme";
 import { useRecoilValue } from "recoil";
+import { rarityMap } from "../constants/rarityMap";
 
 function randomIntFromInterval(min: number, max: number): number {
     // min and max included
@@ -29,11 +30,29 @@ export function NFTFrame(props: { nft: FrenlyNFT }) {
                 {props.nft.attributes
                     ?.filter((item) => item.trait_type !== "Base")
                     .map((item) => {
-                        return <div className="text-xs">{item.value}</div>;
+                        return (
+                            <div className="text-xs">
+                                {item.trait_type} <strong>{item.value}</strong>{" "}
+                                {getRarityValue(item.trait_type, item.value)}%
+                            </div>
+                        );
                     })}
             </div>
         </div>
     );
+}
+
+function getRarityValue(trait_type: string, value: string) {
+    switch (trait_type) {
+        case "Background":
+            return (rarityMap.Background as Record<string, number>)[value] / 10;
+        case "Clothing":
+            return (rarityMap.Clothing as Record<string, number>)[value] / 10;
+        case "Face":
+            return (rarityMap.Face as Record<string, number>)[value] / 10;
+        default:
+            return 0;
+    }
 }
 
 export function Home() {
