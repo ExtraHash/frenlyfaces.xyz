@@ -26,9 +26,11 @@ export function NFTFrame(props: { nft: FrenlyNFT }) {
                 alt={"frenly #" + props.nft.edition}
             />
             <div className="mt-4">
-                {props.nft.attributes?.map((item) => {
-                    return <div className="text-xs">{item.value}</div>;
-                })}
+                {props.nft.attributes
+                    ?.filter((item) => item.trait_type !== "Base")
+                    .map((item) => {
+                        return <div className="text-xs">{item.value}</div>;
+                    })}
             </div>
         </div>
     );
