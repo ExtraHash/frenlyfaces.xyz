@@ -87,6 +87,7 @@ function getRarityValue(trait_type: string, value: string) {
 export function Home() {
     const [displayedFrenlys, setDisplayedFrenlys] = useState<FrenlyNFT[]>([]);
     const recoilTheme = useRecoilValue(themeState);
+    const [lastFetched, setLastFetched] = useState(Date.now());
 
     useEffect(() => {
         const getFrenlys = async () => {
@@ -113,7 +114,7 @@ export function Home() {
             setDisplayedFrenlys(frenlys);
         };
         getFrenlys();
-    }, []);
+    }, [lastFetched]);
 
     return (
         <>
@@ -213,6 +214,15 @@ export function Home() {
                     </ul>
 
                     <audio className="mt-5" controls src={publicGood}></audio>
+
+                    <button
+                        onClick={() => {
+                            setLastFetched(Date.now());
+                        }}
+                        className=" mt-6 bg-white dark:bg-black hover:bg-gray-100 dark:hover:bg-neutral-900 text-black dark:text-white font-semibold py-2 px-4 border border-gray-400 rounded"
+                    >
+                        roll dice
+                    </button>
 
                     <div
                         className={`mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6`}
