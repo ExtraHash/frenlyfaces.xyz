@@ -5,10 +5,10 @@ export interface FrenlyNFT {
     dna: string;
     edition: number;
     date: number;
-    attributes?: AttributesEntity[] | null;
     compiler: string;
-}
-export interface AttributesEntity {
-    trait_type: string;
-    value: string;
+    background: string;
+    clothing: string;
+    base: string;
+    face: string;
+    rarityScore: number;
 }

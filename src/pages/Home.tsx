@@ -16,8 +16,12 @@ function randomIntFromInterval(min: number, max: number): number {
 }
 
 export function NFTFrame(props: { nft: FrenlyNFT }) {
+    const rarityName = getRarityStr(props.nft.rarityScore);
+
     return (
-        <div className="bg-slate-100 dark:bg-neutral-900 rounded p-4">
+        <div
+            className={`bg-slate-100 dark:bg-neutral-900 rounded p-4 ${rarityName.toLowerCase()}`}
+        >
             <p className="text-md mb-1 -mt-2">
                 <strong>#{props.nft.edition}</strong>
             </p>
@@ -27,16 +31,44 @@ export function NFTFrame(props: { nft: FrenlyNFT }) {
                 alt={"frenly #" + props.nft.edition}
             />
             <div className="mt-4">
-                {props.nft.attributes
-                    ?.filter((item) => item.trait_type !== "Base")
-                    .map((item) => {
-                        return (
-                            <div className="text-xs">
-                                {item.trait_type} <strong>{item.value}</strong>{" "}
-                                {getRarityValue(item.trait_type, item.value)}%
-                            </div>
-                        );
-                    })}
+                <table className="table-auto text-xs" style={{ width: "100%" }}>
+                    <tbody>
+                        <tr>
+                            <td>Face</td>
+                            <td>
+                                <strong>{props.nft.face}</strong>
+                            </td>
+                            <td className="text-right">
+                                {getRarityValue("Face", props.nft.face)}%
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Clothing</td>
+                            <td>
+                                <strong>{props.nft.clothing}</strong>
+                            </td>
+                            <td className="text-right">
+                                {getRarityValue("Clothing", props.nft.clothing)}
+                                %
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Background</td>
+                            <td>
+                                <strong>{props.nft.background}</strong>
+                            </td>
+                            <td className="text-right">
+                                {getRarityValue(
+                                    "Background",
+                                    props.nft.background
+                                )}
+                                %
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <p className="mt-2 text-lg">{rarityName}</p>
+                </table>
             </div>
         </div>
     );
@@ -70,7 +102,7 @@ export function Home() {
             const promises = [];
             const getFrenly = async (n: number) => {
                 const res = await fetch(
-                    `https://metadata.frenlyfaces.xyz/json/${n.toString()}`
+                    `https://api.frenlyfaces.xyz/metadata/nft/${n.toString()}`
                 );
                 if (res.status === 200) {
                     frenlys.push(await res.json());
@@ -186,7 +218,7 @@ export function Home() {
                     <audio className="mt-5" controls src={publicGood}></audio>
 
                     <div
-                        className={`mt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6`}
+                        className={`mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6`}
                     >
                         {displayedFrenlys.map((item) => {
                             return <NFTFrame nft={item} key={item.dna} />;
@@ -218,4 +250,21 @@ export function Home() {
             </div>
         </>
     );
+}
+
+function getRarityStr(score: number) {
+    if (score > 235) {
+        return "Flawless";
+    }
+    if (score <= 235 && score > 117) {
+        return "Epic";
+    }
+    if (score <= 117 && score > 80) {
+        return "Rare";
+    }
+    if (score <= 80 && score > 67) {
+        return "Uncommon";
+    }
+
+    return "Common";
 }
