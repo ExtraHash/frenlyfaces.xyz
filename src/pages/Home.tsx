@@ -130,7 +130,7 @@ export function Home() {
                             alt="welcome to frenly faces"
                         ></img>
                     </div>
-                    <p className="mt-2 ">
+                    <p className="mt-4 ">
                         Frenly Faces is a <strong>social experiment</strong> and
                         1000 piece <strong>hand drawn NFT collection</strong> on
                         Canto blockchain that Free minted on 02/01/2023. Frenly
@@ -213,13 +213,13 @@ export function Home() {
                         </li>
                     </ul>
 
-                    <audio className="mt-5" controls src={publicGood}></audio>
+                    <audio className="mt-8" controls src={publicGood}></audio>
 
                     <button
                         onClick={() => {
                             setLastFetched(Date.now());
                         }}
-                        className=" mt-6 bg-white dark:bg-black hover:bg-gray-100 dark:hover:bg-neutral-900 text-black dark:text-white font-semibold py-2 px-4 border border-gray-400 rounded"
+                        className=" mt-8 bg-white dark:bg-black hover:bg-gray-100 dark:hover:bg-neutral-900 text-black dark:text-white font-semibold py-2 px-4 border border-gray-400 rounded"
                     >
                         roll dice
                     </button>
