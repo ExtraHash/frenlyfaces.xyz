@@ -166,7 +166,7 @@ export function Home() {
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                Discord Chat (Holders Only)
+                                Discord Chat
                             </a>
                         </li>
                         <li>
