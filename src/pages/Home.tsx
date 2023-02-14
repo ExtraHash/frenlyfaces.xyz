@@ -189,7 +189,6 @@ export function Home() {
                                 Contract
                             </a>
                         </li>
-
                         <li>
                             <a
                                 className="underline text-pink-600 font-bold"
@@ -200,7 +199,6 @@ export function Home() {
                                 Treasury
                             </a>
                         </li>
-
                         <li>
                             <a
                                 className="underline text-pink-600 font-bold"
@@ -209,6 +207,16 @@ export function Home() {
                                 rel="noreferrer"
                             >
                                 Metadata (HTTP Mirror)
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                className="underline text-pink-600 font-bold"
+                                href={`https://frenlyfaces.xyz/verify`}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                NFT Verification
                             </a>
                         </li>
                     </ul>
