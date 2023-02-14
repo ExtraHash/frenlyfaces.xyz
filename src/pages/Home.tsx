@@ -213,7 +213,6 @@ export function Home() {
                             <a
                                 className="underline text-pink-600 font-bold"
                                 href={`https://frenlyfaces.xyz/verify`}
-                                target="_blank"
                                 rel="noreferrer"
                             >
                                 NFT Verification
